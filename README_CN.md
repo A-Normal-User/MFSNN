@@ -69,6 +69,7 @@
 *   `README.md`：项目的说明文件。
 *   `model`：存储了训练好的机器学习模型文件。
 *   `data`：包含了安托万方程参数和分子向量数据的Excel文件。
+    * `antoine.xlsx`：包含了安托万方程参数的Excel文件。
 *   `CompareModels`：包含了比较不同模型预测结果的Excel文件和相关的Aspen文件、计算文件。
     * `MLPROP`：包含使用[MLPROP](https://ml-prop.mv.rptu.de/)网页计算得到的数据。 
     * `Aspen File`：包含相关NRTL参数导入Aspen Plus软件后计算气液相平衡的文件。
@@ -80,3 +81,15 @@
     * `test_T_Extrapolation.xlsx`：温度外推测试集的输入数据。
     * `test_T_Extrapolation_pred.xlsx`：温度外推测试集的预测结果。
 
+## 需要安装的库
+```python
+pip install -r requirements.txt
+```
+
+## 使用主要注意事项
+1. 由于版权问题，`antoine.xlsx`文件无法公开，读者需要首先将其中的0参数替换为可用的蒸气压方程参数，其计算规则为：
+$$
+    \ln p^{\text{sat}}/\text{Pa} = A + \frac{B}{T + C} + D \times T + E \times \ln T + F \times T^G
+$$
+2. `calc.ipynb`文件中包含了计算测试集结果的代码，读者可以直接运行该文件来计算测试集的预测结果。
+3. `calc.py`文件中包含了计算气液平衡相图的函数和类，读者可以根据需要调用这些函数和类来进行计算。

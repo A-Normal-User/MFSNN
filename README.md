@@ -70,6 +70,7 @@
 *   `README.md`: The instruction file for the project.
 *   `model`: Stores the trained machine learning model files.
 *   `data`: Contains Excel files with Antoine equation parameters and molecular vector data.
+    * `antoine.xlsx`: An Excel file containing Antoine equation parameters.
 *   `CompareModels`: Contains Excel files, related Aspen files, and calculation files for comparing the prediction results of different models.
     * `MLPROP`: Contains the data calculated using the [MLPROP](https://ml-prop.mv.rptu.de/) website. 
     * `Aspen File`: Contains the files for calculating vapor-liquid equilibria after importing the relevant NRTL parameters into the Aspen Plus software.
@@ -80,3 +81,16 @@
     * `test_newbinary_pred.xlsx`: The prediction results of the new binary pair test set.
     * `test_T_Extrapolation.xlsx`: The input data of the temperature extrapolation test set.
     * `test_T_Extrapolation_pred.xlsx`: The prediction results of the temperature extrapolation test set.
+
+## Required Libraries
+```python
+pip install -r requirements.txt
+```
+
+## Key Notes for Usage
+1. Due to copyright issues, the `antoine.xlsx` file is not publicly available. Users must first replace the zero parameters in the file with valid vapor pressure equation parameters. The calculation formula is:
+$$
+    \ln p^{\text{sat}}/\text{Pa} = A + \frac{B}{T + C} + D \times T + E \times \ln T + F \times T^G
+$$
+2. The `calc.ipynb` file contains the code for calculating test set results. Users can run this file directly to obtain the predicted results for the test set.
+3. The `calc.py` file contains functions and classes for calculating vapor-liquid equilibrium phase diagrams. Users can call these functions and classes as needed to perform calculations.
