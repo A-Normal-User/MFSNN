@@ -57,6 +57,7 @@
 │      model_870122900.pt
 │
 ├─test
+|      test_Jaubert.xlsx
 │      test_newbinary.xlsx
 │      test_newbinary_pred.xlsx
 │      test_T_Extrapolation.xlsx
@@ -77,6 +78,7 @@
     * The remaining files are the prediction results of the test set. Files ending with `_T` are the results of the temperature extrapolation test set, while the others are the prediction results of new binary pairs.
     * Files starting with `test_MLPROP_WEB` are the results calculated directly from the MLPROP website. We used a spline interpolation method to obtain the data in these files.
 *  `test`: Contains the Excel files of the test set and the prediction results.
+    * `test_Jaubert.xlsx`: The complete test results of MFSNN on the database proposed by Jaubert et al.
     * `test_newbinary.xlsx`: The input data of the new binary pair test set.
     * `test_newbinary_pred.xlsx`: The prediction results of the new binary pair test set.
     * `test_T_Extrapolation.xlsx`: The input data of the temperature extrapolation test set.
