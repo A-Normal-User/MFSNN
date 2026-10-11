@@ -77,7 +77,7 @@
     * 其余文件均为测试集的预测结果，以`_T`结尾的文件为温度外推测试集的结果，其他均为新二元对的预测结果。
     * `test_MLPROP_WEB`开头的文件为直接从MLPROP网页上计算得到的结果，我们使用样条插值的方法计算得到了该文件数据。
 *  `test`：包含了测试集的Excel文件和预测结果的Excel文件。
-    * `test_Jaubert.xlsx`：MFSNN在Jaubert等人提出的测试集的完整测试结果。
+    * `test_Jaubert.xlsx`：MFSNN在Jaubert等人提出的数据库上的完整测试结果。
     * `test_newbinary.xlsx`：新二元对测试集的输入数据。
     * `test_newbinary_pred.xlsx`：新二元对测试集的预测结果。
     * `test_T_Extrapolation.xlsx`：温度外推测试集的输入数据。
